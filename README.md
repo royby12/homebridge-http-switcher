@@ -5,6 +5,7 @@ https://hub.docker.com/r/tomerfi/switcher_webapi
 
 Then add to the config.json:
 
+ ``` 
 {
     "accessory": "HttpSwitcher",
     "name": "Boiler",
@@ -13,4 +14,4 @@ Then add to the config.json:
     "statusUrl": "http://localhost:8000",
     "DefaultDuration": "3600"
 }
-
+ ``` 
