@@ -1,0 +1,23 @@
+{
+  "name": "homebridge-http-switcher",
+  "version": "0.0.1",
+  "description": "Homebridge Plugin for Switcher. Works in HTTP using switcher-water-heater-webapi.",
+  "license": "ISC",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/royby12/homebridge-http-switcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/royby12/homebridge-http-switcher/issues"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
+  },
+  "dependencies": {
+    "request": "^2.67.0"
+  }
+}
