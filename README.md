@@ -6,7 +6,7 @@
 
 1. Install [homebridge](https://github.com/nfarina/homebridge#installation-details).
 
-2. Install the "[Switcher Water Heater WebAPI](https://hub.docker.com/r/tomerfi/switcher_webap)"
+2. Install the "[Switcher Water Heater WebAPI](https://www.dockeril.net/2019/05/06/switcher-water-heater-webapi/)"
 
 3. Install the Plugin
  ```
