@@ -21,6 +21,7 @@ function HttpSwitcher(log, config) {
 	this.remainingHMS;
 	this.remaining 			= 0;
 	this.powerOn 			= false;
+	this.JSONresponse;
 }
 
 HttpSwitcher.prototype = {
@@ -103,16 +104,24 @@ HttpSwitcher.prototype = {
                         callback(error);
                 }
                 else{
-                    var json = JSON.parse(responseBody);
-                    this.log("switcher is: ", json.state);
+                    
+                	try {
+					  this.JSONresponse = JSON.parse(responseBody);
+					  this.log("HIT");
+					}
+					catch(err) {
+					  this.log("CACHE");
+					}
 
-                    this.remainingHMS = json.time_left;
+                    this.log("switcher is: ", this.JSONresponse.state);
+
+                    this.remainingHMS = this.JSONresponse.time_left;
 					var a = this.remainingHMS.split(':');
 					this.remaining = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]); //In seconds
 
 					this.log("Remaining time is: " + this.remainingHMS);
 
-                    if (json.state == "on")
+                    if (this.JSONresponse.state == "on")
                     {
                             this.powerOn = 1;
                     }
