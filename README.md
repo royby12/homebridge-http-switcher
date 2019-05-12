@@ -9,9 +9,9 @@ Then add to the config.json:
 {
     "accessory": "HttpSwitcher",
     "name": "Boiler",
-    "icon": 0,
-    "timeout": 3000,
-    "statusUrl": "http://localhost:8000",
-    "DefaultDuration": "3600"
+    "icon": 0,                                      //Optional, default is 0 --> Faucet Icon
+    "timeout": 3000,                                //Optional, default is 5000 ms
+    "statusUrl": "http://[YOUR DOCKER IP]:8000",
+    "DefaultDuration": "3600"                       //Optional, default is 3600 second 
 }
  ``` 
